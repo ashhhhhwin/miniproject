@@ -2,13 +2,15 @@
 <h2>Phone Book App</h2>
 <div class="container">
 
-<h3>Contacts</h3>
-<div class="heading">
-<a routerLink="add">+ Add Contact</a>
-</div>
-<table class="table table-dark">
 
-    <tbody *ngFor="let c of contact">
+<div class="heading">
+<p><label>Contacts</label><button type="button" (click)="AddContact()" class="btn btn-dark">+ Add Contact</button>
+</p>
+<input type="text" [(ngModel)]="searchText" placeholder="search by name">
+</div>
+<table class="table table-striped table-bordered table-sm"cellspacing="0">
+
+    <tbody *ngFor="let c of (contact | sortname) | Searchbyname:searchText">
         <tr>
             <td>
                 {{c.FirstName}}

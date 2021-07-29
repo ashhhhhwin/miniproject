@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Contact } from 'src/Models/Contact';
 import { ContactService } from '../ContactService';
 import { Router } from '@angular/router';
+import { Searchbyname } from './Searchbyname.pipe';
+
 
 @Component({
   selector: 'app-display-contact',
@@ -10,10 +12,12 @@ import { Router } from '@angular/router';
 })
 export class DisplayContactComponent implements OnInit {
 
-  contact?:any;
-
+  contact:any;
+  
+  searchText:any;
+  
   constructor(private pcontact:ContactService,private route:Router) { }
-
+  
   ngOnInit(): void {
     this.displayContacts();
     

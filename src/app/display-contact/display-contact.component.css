@@ -1,6 +1,8 @@
 .container{
-    border-style: dotted;
-    margin-top: 210px;
+    border-style: groove;
+    margin-top: 150px;
+    width: 500px;
+    height: 500px;
 }
 
 
@@ -12,5 +14,6 @@ h2{
     text-align: center;
 }
 .heading{
-    float: right;
+    float: left;
+    
 }

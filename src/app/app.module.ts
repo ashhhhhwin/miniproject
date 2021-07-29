@@ -8,12 +8,17 @@ import { DisplayContactComponent } from './display-contact/display-contact.compo
 import { ContactFormsComponent } from './contact-forms/contact-forms.component';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { Searchbyname } from './display-contact/Searchbyname.pipe';
+import { SortnamePipe } from './sortname.pipe';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     DisplayContactComponent,
-    ContactFormsComponent
+    ContactFormsComponent,
+    Searchbyname,
+    SortnamePipe
   ],
   imports: [
     BrowserModule,
